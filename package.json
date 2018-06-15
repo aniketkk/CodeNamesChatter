@@ -5,6 +5,13 @@
   "scripts": {
     "start": "node app.js"
   },
+  "keywords": [
+    "example",
+    "heroku"
+  ],
+  "author": "Aniket Kamat",
+  "license": "MIT",
+  "private": true,
   "dependencies": {
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
