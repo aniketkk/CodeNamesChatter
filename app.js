@@ -77,10 +77,10 @@ io.on('connection', (socket) => {
         });
     });
 
-    socket.on('selected cards', () => {
-        console.log(socket.username);
-        io.in(socket.gameid).emit('stop typing', {
-            username: socket.username
+    socket.on('selected words', (data) => {
+        console.log(data.selectedWords +  " " + socket.gameid);
+        io.in(socket.gameid).emit('selected words', {
+            selectedWords: data.selectedWords
         });
     });
 
