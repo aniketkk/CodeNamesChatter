@@ -69,6 +69,12 @@ io.on('connection', (socket) => {
         });
     });
 
+    socket.on('state', (data) => {
+        socket.to(socket.gameid).emit('state',
+           data.state
+        );
+    });
+
     // when the client emits 'stop typing', we broadcast it to others
     socket.on('stop typing', () => {
         console.log(socket.username+ " stopped typing");
